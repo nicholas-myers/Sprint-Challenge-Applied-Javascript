@@ -59,18 +59,25 @@ const createCarousel = () => {
    for ( let i = 0; i < imageArray.length; i ++) {
     if(count === 1) {
       imageArray[0].style.display ="block"
+      imageArray[1].style.display ="none"
+      imageArray[2].style.display = "none"
+      imageArray[3].style.display = "none"
     } else if (count === 2) {
       imageArray[0].style.display ="none"
       imageArray[1].style.display ="block"
+      imageArray[2].style.display = "none"
+      imageArray[3].style.display = "none"
     } else if (count === 3) {
       imageArray[0].style.display ="none"
       imageArray[1].style.display ="none"
       imageArray[2].style.display = "block"
+      imageArray[3].style.display = "none"
     } else if (count === 4) {
       imageArray[0].style.display ="none"
       imageArray[1].style.display ="none"
       imageArray[2].style.display = "none"
       imageArray[3].style.display = "block"
+      count = 0
     }
    } //close for
 
@@ -81,18 +88,25 @@ const createCarousel = () => {
    for ( let i = 0; i < imageArray.length; i ++) {
     if(count === 1) {
       imageArray[0].style.display ="block"
+      imageArray[1].style.display ="none"
+      imageArray[2].style.display = "none"
+      imageArray[3].style.display = "none"
     } else if (count === 2) {
       imageArray[0].style.display ="none"
       imageArray[1].style.display ="block"
+      imageArray[2].style.display = "none"
+      imageArray[3].style.display = "none"
     } else if (count === 3) {
       imageArray[0].style.display ="none"
       imageArray[1].style.display ="none"
       imageArray[2].style.display = "block"
+      imageArray[3].style.display = "none"
     } else if (count === 4) {
       imageArray[0].style.display ="none"
       imageArray[1].style.display ="none"
       imageArray[2].style.display = "none"
       imageArray[3].style.display = "block"
+      count = 0
     }
    } //close for
   })
