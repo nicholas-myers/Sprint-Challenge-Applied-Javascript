@@ -29,20 +29,20 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead.
 
 1. What is the DOM?
-
+The interface for the browser to view web pages
 2. What is an event?
-
+anytime an action or interaction happens in the browser, seen by the DOM. loading the page being a type of action, clicks being a type of interaction for example
 3. What is an event listener?
-
+ an event listener is attached to a particular node and tells that node to listen for a particular event(action or interacction) then preform a function when that event happens
 4. Why would we convert a NodeList into an Array?
-
+ when we want to do mor then just iterate over the array, to make a new Array to push new data to maybe or .filter out data manipulating the data itself 
 5. What is a component?
-
+a re-usable function that you can pass around so you don't need to rewrite the same code over and over again
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 * [ ] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
