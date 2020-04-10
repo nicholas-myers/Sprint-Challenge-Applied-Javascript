@@ -309,25 +309,29 @@ body {
 }
 .carousel .animateLeft {
   position: relative;
-  animation: animateleft 0.4s;
+  animation: animateleft 2s;
 }
 @keyframes animateleft {
   from {
     left: -300px;
+    opacity: 0;
   }
   to {
     left: 0;
+    opacity: 1;
   }
 }
 .carousel .animateRight {
   position: relative;
-  animation: animateright 0.4s;
+  animation: animateright 2s;
 }
 @keyframes animateright {
   from {
     right: -300px;
+    opacity: 0;
   }
   to {
     right: 0;
+    opacity: 1;
   }
 }

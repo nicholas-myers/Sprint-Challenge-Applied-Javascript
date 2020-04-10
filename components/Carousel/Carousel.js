@@ -65,7 +65,7 @@ const createCarousel = () => {
    for ( let i = 0; i < imageArray.length; i ++) {
 
     if (imageArray[count] === imageArray[i]) {
-      imageArray[i].classList.add("animateLeft")
+      imageArray[i].classList.add("animateRight")
       imageArray[i].style.display = "block"
     } else if (imageArray[count] !== imageArray[i]) {
       imageArray[i].style.display = "none"
@@ -84,7 +84,7 @@ const createCarousel = () => {
     console.log(count)
     for ( let i = 0; i < imageArray.length; i ++) {
       if (imageArray[count] === imageArray[i]) {
-        imageArray[i].classList.add("animateRight")
+        imageArray[i].classList.add("animateLeft")
         imageArray[i].style.display = "block"
       } else if (imageArray[count] !== imageArray[i]) {
         imageArray[i].style.display = "none"
