@@ -18,6 +18,7 @@
   </div>
 */
 
+const carouselContainer = document.querySelector(".carousel-container")
 
 ///create component
 const createCarousel = () => {
@@ -38,10 +39,37 @@ const createCarousel = () => {
   carousel.appendChild(image4)
   carousel.appendChild(rightButton)
  
+  // set Attributes
+  carousel.classList.add("carousel")
+  leftButton.classList.add("left-button")
+  image1.src = "./assets/carousel/mountains.jpeg"
+  image2.src = "./assets/carousel/computer.jpeg"
+  image3.src = "./assets/carousel/trees.jpeg"
+  image4.src = "./assets/carousel/turntable.jpeg"
+  rightButton.classList.add("right-button")
 
+  
+
+  // event listeners
+  const imageArray = [image1, image2, image3, image4]
+  leftButton.addEventListener("click", (event) => {
+    // console.log(imageArray[0])
+   for ( let i = 0; i < imageArray.length; i ++) {
+    if (imageArray[i] === imageArray[0]) {
+      imageArray[i].style.display = "block"
+    }
+   } //close for
+
+  }) //close leftbutton listener
+
+  rightButton.addEventListener("click", (event) => {
+    
+  })
 
   return carousel
 } //close createCarousel
 
 
-console.log(createCarousel())
+// console.log(createCarousel())
+
+carouselContainer.appendChild(createCarousel())
