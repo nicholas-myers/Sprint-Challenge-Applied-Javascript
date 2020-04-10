@@ -54,7 +54,7 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         // console.log(error)
     })
 
-const createCard = (article) => {
+const createCard = (object) => {
     ///instantiate
     const card = document.createElement("div")
     const headline = document.createElement("div")
@@ -76,11 +76,11 @@ const createCard = (article) => {
     headline.classList.add("headline")
     author.classList.add("author")
     imageContainer.classList.add("img-container")
-    authorImage.src = article.authorPhoto
+    authorImage.src = object.authorPhoto
 
     // set content
-    headline.textContent = author.headline
-    authorName.textContent= `By ${author.authorName}`
+    headline.textContent = object.headline
+    authorName.textContent= `By ${object.authorName}`
 
     return card
 }
