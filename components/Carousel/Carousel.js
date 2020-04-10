@@ -65,9 +65,12 @@ const createCarousel = () => {
    for ( let i = 0; i < imageArray.length; i ++) {
 
     if (imageArray[count] === imageArray[i]) {
+      imageArray[i].classList.add("animateLeft")
       imageArray[i].style.display = "block"
     } else if (imageArray[count] !== imageArray[i]) {
       imageArray[i].style.display = "none"
+      imageArray[i].classList.remove("animateLeft")
+      imageArray[i].classList.remove("animateRight")
     }
 
   } //close for
@@ -81,9 +84,12 @@ const createCarousel = () => {
     console.log(count)
     for ( let i = 0; i < imageArray.length; i ++) {
       if (imageArray[count] === imageArray[i]) {
+        imageArray[i].classList.add("animateRight")
         imageArray[i].style.display = "block"
       } else if (imageArray[count] !== imageArray[i]) {
         imageArray[i].style.display = "none"
+        imageArray[i].classList.remove("animateRight")
+        imageArray[i].classList.remove("animateLeft")
       }
   }
 })
@@ -94,3 +100,7 @@ const createCarousel = () => {
 // console.log(createCarousel())
 
 carouselContainer.appendChild(createCarousel())
+
+
+// .w3-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+// .w3-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}

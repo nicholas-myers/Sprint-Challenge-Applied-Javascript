@@ -28,15 +28,37 @@
     top: 50%; 
     left: 25px;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   .right-button {
     top: 50%; 
     right: 25px;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   img {
     .width-100();
     display: none;
     border-radius: 10px;
+    z-index: -1;
+  }
+
+  .animateLeft {
+    position:relative;
+    animation:animateleft 1s;
+  }
+
+  @keyframes animateleft {
+    from {left:-300px;} 
+    to {left:0;}
+  }
+  .animateRight {
+    position:relative;
+    animation:animateright 1s;
+  }
+
+  @keyframes animateright {
+    from {right:-300px;} 
+    to {right:0;}
   }
 }

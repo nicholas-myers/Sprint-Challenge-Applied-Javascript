@@ -293,14 +293,41 @@ body {
   top: 50%;
   left: 25px;
   transform: translate(0, -50%);
+  z-index: 1;
 }
 .carousel .right-button {
   top: 50%;
   right: 25px;
   transform: translate(0, -50%);
+  z-index: 1;
 }
 .carousel img {
   width: 100%;
   display: none;
   border-radius: 10px;
+  z-index: -1;
+}
+.carousel .animateLeft {
+  position: relative;
+  animation: animateleft 0.4s;
+}
+@keyframes animateleft {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 0;
+  }
+}
+.carousel .animateRight {
+  position: relative;
+  animation: animateright 0.4s;
+}
+@keyframes animateright {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 0;
+  }
 }
