@@ -50,67 +50,43 @@ const createCarousel = () => {
 
   
 
-  // event listeners
+  // create image array and start the count at 0
   const imageArray = [image1, image2, image3, image4]
   let count = 0
-  leftButton.addEventListener("click", (event) => {
-    // console.log(imageArray[0])
-    count++
-   for ( let i = 0; i < imageArray.length; i ++) {
-    if(count === 1) {
-      imageArray[0].style.display ="block"
-      imageArray[1].style.display ="none"
-      imageArray[2].style.display = "none"
-      imageArray[3].style.display = "none"
-    } else if (count === 2) {
-      imageArray[0].style.display ="none"
-      imageArray[1].style.display ="block"
-      imageArray[2].style.display = "none"
-      imageArray[3].style.display = "none"
-    } else if (count === 3) {
-      imageArray[0].style.display ="none"
-      imageArray[1].style.display ="none"
-      imageArray[2].style.display = "block"
-      imageArray[3].style.display = "none"
-    } else if (count === 4) {
-      imageArray[0].style.display ="none"
-      imageArray[1].style.display ="none"
-      imageArray[2].style.display = "none"
-      imageArray[3].style.display = "block"
-      count = 0
-    }
-   } //close for
 
-  }) //close leftbutton listener
+
+  // add an event listener that checks if the count is equal to the image number then display only that image
+  leftButton.addEventListener("click", (event) => {
+    count--
+    if (count < 0) {
+      count = 3
+    }
+    console.log(count)
+   for ( let i = 0; i < imageArray.length; i ++) {
+
+    if (imageArray[count] === imageArray[i]) {
+      imageArray[i].style.display = "block"
+    } else if (imageArray[count] !== imageArray[i]) {
+      imageArray[i].style.display = "none"
+    }
+
+  } //close for
+})
 
   rightButton.addEventListener("click", (event) => {
     count++
-   for ( let i = 0; i < imageArray.length; i ++) {
-    if(count === 1) {
-      imageArray[0].style.display ="block"
-      imageArray[1].style.display ="none"
-      imageArray[2].style.display = "none"
-      imageArray[3].style.display = "none"
-    } else if (count === 2) {
-      imageArray[0].style.display ="none"
-      imageArray[1].style.display ="block"
-      imageArray[2].style.display = "none"
-      imageArray[3].style.display = "none"
-    } else if (count === 3) {
-      imageArray[0].style.display ="none"
-      imageArray[1].style.display ="none"
-      imageArray[2].style.display = "block"
-      imageArray[3].style.display = "none"
-    } else if (count === 4) {
-      imageArray[0].style.display ="none"
-      imageArray[1].style.display ="none"
-      imageArray[2].style.display = "none"
-      imageArray[3].style.display = "block"
+    if (count > 3) {
       count = 0
     }
-   } //close for
-  })
-
+    console.log(count)
+    for ( let i = 0; i < imageArray.length; i ++) {
+      if (imageArray[count] === imageArray[i]) {
+        imageArray[i].style.display = "block"
+      } else if (imageArray[count] !== imageArray[i]) {
+        imageArray[i].style.display = "none"
+      }
+  }
+})
   return carousel
 } //close createCarousel
 
