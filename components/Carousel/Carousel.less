@@ -28,14 +28,37 @@
     top: 50%; 
     left: 25px;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   .right-button {
     top: 50%; 
     right: 25px;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   img {
     .width-100();
     display: none;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  .animateLeft {
+    position:relative;
+    animation:animateleft 2s;
+  }
+
+  @keyframes animateleft {
+    from {left:-300px;opacity:0;} 
+    to {left:0;opacity:1;}
+  }
+  .animateRight {
+    position:relative;
+    animation:animateright 2s;
+  }
+
+  @keyframes animateright {
+    from {right:-300px; opacity:0;} 
+    to {right:0; opacity:1;}
   }
 }
